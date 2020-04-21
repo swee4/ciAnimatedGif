@@ -1,6 +1,6 @@
 if(NOT TARGET ciAnimatedGif)
     # Define ${Cinder-Notifications_PROJECT_ROOT}. ${CMAKE_CURRENT_LIST_DIR} is just the current directory.
-    get_filename_component(ciAnimatedGif_PROJECT_ROOT "${D:\save cave\CS stuff i think\CS 126\Cinder\blocks\ciAnimatedGif}/../.." ABSOLUTE)
+    get_filename_component(ciAnimatedGif_PROJECT_ROOT "${CMAKE_CURRENT_LIST_DIR}/../.." ABSOLUTE)
 
     # Define ${CINDER_PATH} as usual.
     get_filename_component(CINDER_PATH "${ciAnimatedGif_PROJECT_ROOT}/../.." ABSOLUTE)
@@ -34,10 +34,10 @@ if(NOT TARGET ciAnimatedGif)
     # # target_link_libraries(Cinder-Notifications "${Cinder-OpenCV_PROJECT_ROOT}/lib/libopencv_core.a")
 
     if(NOT TARGET cinder)
-        include("${D:\save cave\CS stuff i think\CS 126\Cinder\blocks\ciAnimatedGif}/proj/cmake/configure.cmake")
+        include("${CINDER_PATH}/proj/cmake/configure.cmake")
         find_package(cinder REQUIRED PATHS
-                "${D:\save cave\CS stuff i think\CS 126\Cinder\blocks\ciAnimatedGif}/${CINDER_LIB_DIRECTORY}"
-                "$ENV{D:\save cave\CS stuff i think\CS 126\Cinder\blocks\ciAnimatedGif}/${CINDER_LIB_DIRECTORY}")
+                "${CINDER_PATH}/${CINDER_LIB_DIRECTORY}"
+                "$ENV{CINDER_PATH}/${CINDER_LIB_DIRECTORY}")
     endif()
     target_link_libraries(ciAnimatedGif PRIVATE cinder)
 
