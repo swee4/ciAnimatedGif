@@ -24,7 +24,7 @@ if(NOT TARGET ciAnimatedGif)
     # Add include directories.
     # Notice that `cinderblock.xml` has `<includePath>src</includePath>`.
     # So you need to set `../../src/` to include.
-    target_include_directories(ciAnimatedGif PUBLIC "${Cinder-Notifications_PROJECT_ROOT}/src" )
+    target_include_directories(ciAnimatedGif PUBLIC "${ciAnimatedGif_PROJECT_ROOT}/src" )
     target_include_directories(ciAnimatedGif SYSTEM BEFORE PUBLIC "${CINDER_PATH}/include" )
 
 
